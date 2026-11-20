@@ -103,6 +103,18 @@ button {
   font-size: 19px;
 }
 
+#timer {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a8874d;
+  line-height: 2.2;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+
 .music-box {
   margin: 20px 0;
   padding: 16px;
@@ -228,7 +240,8 @@ async function openInvitation() {
 function updateCountdown() {
   const eventDate = new Date("2026-12-10T14:00:00+03:00");
   const now = new Date();
-  const difference = eventDate - now;
+  const difference = eventDate.getTime() - now.getTime();
+
   const timer = document.getElementById("timer");
 
   if (difference <= 0) {
@@ -242,9 +255,9 @@ function updateCountdown() {
   const seconds = Math.floor((difference / 1000) % 60);
 
   timer.textContent =
-    days + " يوم · " +
-    hours + " ساعة · " +
-    minutes + " دقيقة · " +
+    days + " يوم | " +
+    hours + " ساعة | " +
+    minutes + " دقيقة | " +
     seconds + " ثانية";
 }
 
