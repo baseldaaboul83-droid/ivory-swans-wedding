@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6f0e6">
+<title>دعوة زفاف</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#f6f0e6;color:#796548;
+ font-family:'Cairo',sans-serif;text-align:center;
+}
+.page{min-height:100vh;padding:22px 17px 45px}
+.frame{
+ max-width:480px;margin:auto;min-height:90vh;
+ border:1px solid #b99d6c;padding:12px;
+ position:relative;
+}
+.inner{
+ min-height:calc(90vh - 24px);
+ border:1px solid #d9c8a5;padding:35px 16px;
+ display:flex;flex-direction:column;align-items:center;
+ justify-content:center;gap:17px;
+ background:linear-gradient(145deg,#fbf8f1,#f2eadc);
+}
+.ornament{font-size:25px;color:#b79a67;letter-spacing:8px}
+.small{font-size:12px;letter-spacing:3px;color:#a68b60}
+h1{font-family:'Amiri',serif;font-size:43px;font-weight:400;margin:0}
+.names{font-family:'Amiri',serif;font-size:30px;line-height:1.8}
+p{line-height:2;font-size:14px;margin:0}
+.goldline{width:75px;height:1px;background:#b99d6c;margin:5px auto}
+button{
+ border:1px solid #b99d6c;background:#8e7650;color:white;
+ padding:13px 28px;border-radius:30px;font-family:inherit;
+ font-size:14px;cursor:pointer;
+}
+button.secondary{background:transparent;color:#806a48}
+#invitation{display:none}
+#invitation.show{display:block;animation:appear 1.2s ease}
+#cover.hide{display:none}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.swans{width:100%;max-width:280px;height:165px}
+.countdown{display:flex;gap:9px;justify-content:center;direction:rtl}
+.unit{background:#fffaf1;border:1px solid #dfd0b3;padding:10px 12px;min-width:66px}
+.unit strong{display:block;font-family:'Amiri',serif;font-size:25px;font-weight:400}
+.unit span{font-size:10px}
+.details{margin:20px 0;line-height:2.2}
+.footer{font-family:'Amiri',serif;font-size:22px;margin-top:25px}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="frame">
+<div class="inner" id="cover">
+<div class="ornament">✧ ❀ ✧</div>
+<div class="small">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم</div>
+<svg class="swans" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg">
+<g fill="#fff" stroke="#c5ad82" stroke-width="1.5">
+<path d="M25 125 Q55 100 100 119 Q122 130 139 118 Q123 148 70 143 Q38 140 25 125Z"/>
+<path d="M275 125 Q245 100 200 119 Q178 130 161 118 Q177 148 230 143 Q262 140 275 125Z"/>
+<path d="M85 120 Q103 95 102 65 Q99 35 122 24 Q137 17 140 30 Q121 34 119 59 Q117 86 145 119Z"/>
+<path d="M215 120 Q197 95 198 65 Q201 35 178 24 Q163 17 160 30 Q179 34 181 59 Q183 86 155 119Z"/>
+</g>
+<g fill="#c2a36b"><circle cx="139" cy="29" r="3"/><circle cx="161" cy="29" r="3"/></g>
+<path d="M105 119 Q150 145 195 119" fill="none" stroke="#d4c19b" stroke-width="2"/>
+<g fill="none" stroke="#c5ad82" stroke-width="1">
+<path d="M15 155 Q45 135 60 153 M285 155 Q255 135 240 153"/>
+<path d="M22 151 l-8 -12 m8 12 l12 -12 M278 151 l8 -12 m-8 12 l-12 -12"/>
+</g>
+</svg>
+<h1>دعوة زفاف</h1>
+<div class="goldline"></div>
+<div class="names">اسم العروس<br><span style="color:#b69a68">♥</span><br>اسم العريس</div>
+<p>بكل الحب والفرح<br>ندعوكم لمشاركتنا أجمل أيام العمر</p>
+<button onclick="openInvitation()">افتحوا دعوتنا 🤍</button>
+<div class="small">10 • 12 • 2026</div>
+</div>
+
+<div id="invitation">
+<div class="ornament">✧ ❀ ✧</div>
+<div class="small">أَهْلاً وَسَهْلاً بِكُمْ</div>
+<h1>فرحتنا تكتمل بكم</h1>
+<div class="swans" style="font-size:65px;height:auto">🦢 🤍 🦢</div>
+<div class="names">اسم العروس ♥ اسم العريس</div>
+<p>يسعدنا دعوتكم لحضور حفل زفافنا<br>ومشاركتنا فرحتنا بهذه المناسبة الغالية</p>
+<div class="goldline"></div>
+<div class="details">
+<strong>الخميس</strong><br>
+10 ديسمبر 2026<br>
+<strong>القاعة</strong><br>
+سيتم إضافة اسم القاعة قريباً
+</div>
+<div class="goldline"></div>
+<p>الوقت المتبقي على فرحتنا</p>
+<div class="countdown">
+<div class="unit"><strong id="days">--</strong><span>يوم</span></div>
+<div class="unit"><strong id="hours">--</strong><span>ساعة</span></div>
+<div class="unit"><strong id="minutes">--</strong><span>دقيقة</span></div>
+<div class="unit"><strong id="seconds">--</strong><span>ثانية</span></div>
+</div>
+<br>
+<button class="secondary" onclick="musicToggle()" id="musicButton">♫ تشغيل الموسيقى</button>
+<p id="musicNote" style="font-size:11px">موسيقى هادئة اختيارية</p>
+<div class="goldline"></div>
+<p>حضوركم يزيد فرحتنا بهجة<br>ننتظركم بكل الحب</p>
+<div class="footer">دامت أفراحكم عامرة 🤍</div>
+</div>
+</div>
+</div>
+<script>
+function openInvitation(){
+ document.getElementById('cover').classList.add('hide');
+ document.getElementById('invitation').classList.add('show');
+}
+function updateCountdown(){
+ const target=new Date('2026-12-10T19:00:00+03:00').getTime();
+ let diff=target-Date.now();
+ if(diff<0)diff=0;
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor(diff%86400000/3600000);
+ const m=Math.floor(diff%3600000/60000);
+ const s=Math.floor(diff%60000/1000);
+ document.getElementById('days').textContent=d;
+ document.getElementById('hours').textContent=h;
+ document.getElementById('minutes').textContent=m;
+ document.getElementById('seconds').textContent=s;
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+let audioContext=null,musicTimer=null,musicOn=false,noteIndex=0;
+const melody=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];
+function playNote(){
+ if(!audioContext||!musicOn)return;
+ const osc=audioContext.createOscillator();
+ const gain=audioContext.createGain();
+ osc.type='sine';
+ osc.frequency.value=melody[noteIndex%melody.length];
+ gain.gain.setValueAtTime(0.0001,audioContext.currentTime);
+ gain.gain.exponentialRampToValueAtTime(0.045,audioContext.currentTime+0.15);
+ gain.gain.exponentialRampToValueAtTime(0.0001,audioContext.currentTime+1.5);
+ osc.connect(gain);gain.connect(audioContext.destination);
+ osc.start();osc.stop(audioContext.currentTime+1.6);
+ noteIndex++;
+}
+async function musicToggle(){
+ const button=document.getElementById('musicButton');
+ if(!audioContext)audioContext=new (window.AudioContext||window.webkitAudioContext)();
+ if(audioContext.state==='suspended')await audioContext.resume();
+ musicOn=!musicOn;
+ if(musicOn){
+ playNote();musicTimer=setInterval(playNote,1700);
+ button.textContent='♫ إيقاف الموسيقى';
+ }else{
+ clearInterval(musicTimer);
+ button.textContent='♫ تشغيل الموسيقى';
+ }
+}
+</script>
+</body>
+</html>
