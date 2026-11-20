@@ -1,269 +1,229 @@
 
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دعوة خطوبة باسل ولين</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دعوة خطوبة باسل ولين</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  padding: 22px 14px;
-  font-family: Tahoma, Arial, sans-serif;
-  background: linear-gradient(145deg, #f8f2e8, #e9edf0, #f7eddf);
-  color: #66543e;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 25px 15px 40px;
+      background: linear-gradient(145deg, #f8f2e8, #e9e3d7, #dce7e8);
+      color: #65543d;
+      font-family: Tahoma, Arial, sans-serif;
+      text-align: center;
+    }
 
-.container {
-  max-width: 650px;
-  margin: auto;
-  padding: 22px;
-  background: rgba(255,255,255,.88);
-  border: 1px solid #d7bd86;
-  border-radius: 24px;
-  box-shadow: 0 10px 35px rgba(90,70,40,.13);
-}
+    .container {
+      width: 100%;
+      max-width: 650px;
+      margin: auto;
+    }
 
-.poster {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  border: 2px solid #d6bd8b;
-  margin: 0 auto 20px;
-}
+    .poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 25px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(80, 65, 40, 0.18);
+    }
 
-h1 {
-  color: #a8874d;
-  font-size: 29px;
-  margin: 15px 0;
-}
+    .countdown-box {
+      padding: 24px 15px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid #d6bd8a;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(80, 65, 40, 0.08);
+    }
 
-.intro {
-  font-size: 19px;
-  line-height: 2;
-}
+    h2 {
+      color: #9b7940;
+      font-size: 23px;
+      margin: 0 0 22px;
+    }
 
-.names {
-  color: #a8874d;
-  font-size: 27px;
-  line-height: 1.9;
-  margin: 18px 0;
-}
+    .countdown {
+      display: flex;
+      direction: ltr;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.heart {
-  color: #b99a62;
-  font-size: 25px;
-}
+    .time-unit {
+      min-width: 65px;
+      padding: 13px 8px;
+      background: #f3eadb;
+      border: 1px solid #d6bd8a;
+      border-radius: 12px;
+    }
 
-button {
-  border: none;
-  border-radius: 30px;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #c6a66b, #a9874c);
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 20px 0;
-}
+    .number {
+      display: block;
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-size: 27px;
+      font-weight: bold;
+      color: #8b6a35;
+      font-variant-numeric: lining-nums;
+    }
 
-.details {
-  display: none;
-  animation: appear 1s ease;
-}
+    .unit-label {
+      display: block;
+      margin-top: 7px;
+      font-size: 12px;
+      color: #76664e;
+    }
 
-.details.show {
-  display: block;
-}
+    .details {
+      line-height: 2;
+      font-size: 17px;
+      margin: 22px 0;
+    }
 
-.info {
-  margin: 18px 0;
-  padding: 15px;
-  border-radius: 15px;
-  background: #f7f2e9;
-  border: 1px solid #e3d3b2;
-  line-height: 2;
-  font-size: 18px;
-}
+    .music-button {
+      display: inline-block;
+      padding: 13px 27px;
+      border: none;
+      border-radius: 30px;
+      background: #a88a55;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
 
-.countdown {
-  margin: 22px 0;
-  padding: 18px;
-  border-radius: 15px;
-  background: #edf1f3;
-  color: #657c8b;
-  line-height: 2;
-  font-size: 19px;
-}
+    .music-button:active {
+      transform: scale(0.97);
+    }
 
-#timer {
-  direction: rtl;
-  unicode-bidi: plaintext;
-  font-family: Arial, Tahoma, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #a8874d;
-  line-height: 2.2;
-  margin-top: 10px;
-  overflow-wrap: anywhere;
-}
-
-.music-box {
-  margin: 20px 0;
-  padding: 16px;
-  border-radius: 15px;
-  background: #edf1f3;
-  border: 1px solid #d7bd86;
-}
-
-audio {
-  width: 100%;
-  margin-top: 12px;
-}
-
-.footer {
-  margin-top: 25px;
-  color: #a8874d;
-  line-height: 2;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+    .footer {
+      margin-top: 25px;
+      color: #8b774f;
+      font-size: 15px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <main class="container">
 
-  <img
-    class="poster"
-    src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/A33E2FB2-BDDD-4791-8B1E-AFF40F6C8893.png"
-    alt="دعوة خطوبة باسل ولين"
-  >
+    <img
+      class="poster"
+      src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/0BE13247-96C3-4BD3-8025-56FE000D0E79.png"
+      alt="دعوة خطوبة باسل ولين"
+    >
 
-  <div class="intro">
-    بكل الحب والفرح، نتشرف بدعوتكم لمشاركتنا أجمل لحظاتنا
-  </div>
+    <section class="countdown-box">
+      <h2>باقي على فرحتنا</h2>
 
-  <div class="names">
-    باسل جابر دعبول
-    <div class="heart">♡</div>
-    لين محمد عثمان
-  </div>
+      <div class="countdown">
+        <div class="time-unit">
+          <span class="number" id="days">--</span>
+          <span class="unit-label">يوم</span>
+        </div>
 
-  <button id="openButton" onclick="openInvitation()">
-    افتحوا دعوتنا 🤍
-  </button>
+        <div class="time-unit">
+          <span class="number" id="hours">--</span>
+          <span class="unit-label">ساعة</span>
+        </div>
 
-  <div id="details" class="details">
+        <div class="time-unit">
+          <span class="number" id="minutes">--</span>
+          <span class="unit-label">دقيقة</span>
+        </div>
 
-    <h1>دعوة خطوبة</h1>
+        <div class="time-unit">
+          <span class="number" id="seconds">--</span>
+          <span class="unit-label">ثانية</span>
+        </div>
+      </div>
+    </section>
 
-    <p class="intro">
-      بفرحة قلوبنا وبحضور أحبابنا،<br>
-      نحتفل ببداية حكاية جميلة ونتمنى أن تشاركونا فرحتنا.
-    </p>
-
-    <div class="info">
-      <strong>📅 اليوم والتاريخ</strong><br>
-      الخميس 10 ديسمبر 2026
+    <div class="details">
+      <div>باسل جابر دعبول</div>
+      <div>♡</div>
+      <div>لين محمد عثمان</div>
+      <br>
+      <div>الخميس 10 ديسمبر 2026</div>
+      <div>الساعة الثانية ظهرًا</div>
+      <div>اللاذقية – منتجع النبع السياحي</div>
     </div>
 
-    <div class="info">
-      <strong>🕑 الوقت</strong><br>
-      الساعة الثانية ظهرًا
-    </div>
+    <button class="music-button" id="musicButton">
+      ▶ تشغيل موسيقى الدعوة
+    </button>
 
-    <div class="info">
-      <strong>📍 المكان</strong><br>
-      اللاذقية – منتجع النبع السياحي
-    </div>
-
-    <div class="countdown">
-      <strong>الوقت المتبقي على فرحتنا</strong>
-      <div id="timer">جارٍ الحساب...</div>
-    </div>
-
-    <div class="music-box">
-      <strong>♫ موسيقى فرحتنا</strong>
-      <audio id="music" controls preload="auto">
-        <source
-          src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/Wedding%20day.%20Ave%20Maria%20and%20Azan.m4a"
-          type="audio/mp4">
-        متصفحك لا يدعم تشغيل الصوت.
-      </audio>
-    </div>
+    <audio id="weddingMusic" loop preload="metadata">
+      <source
+        src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/Wedding%20day.%20Ave%20Maria%20and%20Azan.m4a"
+        type="audio/mp4"
+      >
+    </audio>
 
     <div class="footer">
-      وجودكم يزيد فرحتنا جمالًا 🤍<br>
-      بكل الحب، باسل ولين
+      حضوركم يزيد فرحتنا جمالًا ❤️
     </div>
 
-  </div>
+  </main>
 
-</div>
+  <script>
+    const eventDate = new Date("2026-12-10T14:00:00+03:00").getTime();
 
-<script>
-async function openInvitation() {
-  const details = document.getElementById("details");
-  const button = document.getElementById("openButton");
-  const music = document.getElementById("music");
+    function updateCountdown() {
+      const now = Date.now();
+      let difference = eventDate - now;
 
-  details.classList.add("show");
-  button.style.display = "none";
+      if (difference <= 0) {
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+        return;
+      }
 
-  music.currentTime = 0;
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
 
-  try {
-    await music.play();
-  } catch (error) {
-    // يمكن تشغيل الموسيقى يدويًا من زر التحكم.
-  }
-}
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }
 
-function updateCountdown() {
-  const eventDate = new Date("2026-12-10T14:00:00+03:00");
-  const now = new Date();
-  const difference = eventDate.getTime() - now.getTime();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 
-  const timer = document.getElementById("timer");
+    const music = document.getElementById("weddingMusic");
+    const musicButton = document.getElementById("musicButton");
 
-  if (difference <= 0) {
-    timer.textContent = "أهلًا بكم، بدأت فرحتنا! 🤍";
-    return;
-  }
-
-  const days = Math.floor(difference / 86400000);
-  const hours = Math.floor((difference / 3600000) % 24);
-  const minutes = Math.floor((difference / 60000) % 60);
-  const seconds = Math.floor((difference / 1000) % 60);
-
-  timer.textContent =
-    days + " يوم | " +
-    hours + " ساعة | " +
-    minutes + " دقيقة | " +
-    seconds + " ثانية";
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
-</script>
+    musicButton.addEventListener("click", async function () {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicButton.textContent = "❚❚ إيقاف الموسيقى";
+        } catch (error) {
+          musicButton.textContent = "تعذّر تشغيل الموسيقى";
+        }
+      } else {
+        music.pause();
+        musicButton.textContent = "▶ تشغيل موسيقى الدعوة";
+      }
+    });
+  </script>
 
 </body>
 </html>
