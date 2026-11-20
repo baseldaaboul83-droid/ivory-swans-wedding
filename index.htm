@@ -1,5 +1,256 @@
-<img
-  src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/A33E2FB2-BDDD-4791-8B1E-AFF40F6C8893.png"
-  alt="دعوة خطوبة باسل ولين"
-  style="width:100%;height:auto;display:block;border-radius:16px;"
->
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة خطوبة باسل ولين</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 22px 14px;
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(145deg, #f8f2e8, #e9edf0, #f7eddf);
+  color: #66543e;
+  text-align: center;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 22px;
+  background: rgba(255,255,255,.88);
+  border: 1px solid #d7bd86;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(90,70,40,.13);
+}
+
+.poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid #d6bd8b;
+  margin: 0 auto 20px;
+}
+
+h1 {
+  color: #a8874d;
+  font-size: 29px;
+  margin: 15px 0;
+}
+
+.intro {
+  font-size: 19px;
+  line-height: 2;
+}
+
+.names {
+  color: #a8874d;
+  font-size: 27px;
+  line-height: 1.9;
+  margin: 18px 0;
+}
+
+.heart {
+  color: #b99a62;
+  font-size: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #c6a66b, #a9874c);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.details {
+  display: none;
+  animation: appear 1s ease;
+}
+
+.details.show {
+  display: block;
+}
+
+.info {
+  margin: 18px 0;
+  padding: 15px;
+  border-radius: 15px;
+  background: #f7f2e9;
+  border: 1px solid #e3d3b2;
+  line-height: 2;
+  font-size: 18px;
+}
+
+.countdown {
+  margin: 22px 0;
+  padding: 18px;
+  border-radius: 15px;
+  background: #edf1f3;
+  color: #657c8b;
+  line-height: 2;
+  font-size: 19px;
+}
+
+.music-box {
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 15px;
+  background: #edf1f3;
+  border: 1px solid #d7bd86;
+}
+
+audio {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.footer {
+  margin-top: 25px;
+  color: #a8874d;
+  line-height: 2;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <img
+    class="poster"
+    src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/A33E2FB2-BDDD-4791-8B1E-AFF40F6C8893.png"
+    alt="دعوة خطوبة باسل ولين"
+  >
+
+  <div class="intro">
+    بكل الحب والفرح، نتشرف بدعوتكم لمشاركتنا أجمل لحظاتنا
+  </div>
+
+  <div class="names">
+    باسل جابر دعبول
+    <div class="heart">♡</div>
+    لين محمد عثمان
+  </div>
+
+  <button id="openButton" onclick="openInvitation()">
+    افتحوا دعوتنا 🤍
+  </button>
+
+  <div id="details" class="details">
+
+    <h1>دعوة خطوبة</h1>
+
+    <p class="intro">
+      بفرحة قلوبنا وبحضور أحبابنا،<br>
+      نحتفل ببداية حكاية جميلة ونتمنى أن تشاركونا فرحتنا.
+    </p>
+
+    <div class="info">
+      <strong>📅 اليوم والتاريخ</strong><br>
+      الخميس 10 ديسمبر 2026
+    </div>
+
+    <div class="info">
+      <strong>🕑 الوقت</strong><br>
+      الساعة الثانية ظهرًا
+    </div>
+
+    <div class="info">
+      <strong>📍 المكان</strong><br>
+      اللاذقية – منتجع النبع السياحي
+    </div>
+
+    <div class="countdown">
+      <strong>الوقت المتبقي على فرحتنا</strong>
+      <div id="timer">جارٍ الحساب...</div>
+    </div>
+
+    <div class="music-box">
+      <strong>♫ موسيقى فرحتنا</strong>
+      <audio id="music" controls preload="auto">
+        <source
+          src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/Wedding%20day.%20Ave%20Maria%20and%20Azan.m4a"
+          type="audio/mp4">
+        متصفحك لا يدعم تشغيل الصوت.
+      </audio>
+    </div>
+
+    <div class="footer">
+      وجودكم يزيد فرحتنا جمالًا 🤍<br>
+      بكل الحب، باسل ولين
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+async function openInvitation() {
+  const details = document.getElementById("details");
+  const button = document.getElementById("openButton");
+  const music = document.getElementById("music");
+
+  details.classList.add("show");
+  button.style.display = "none";
+
+  music.currentTime = 0;
+
+  try {
+    await music.play();
+  } catch (error) {
+    // يمكن تشغيل الموسيقى يدويًا من زر التحكم.
+  }
+}
+
+function updateCountdown() {
+  const eventDate = new Date("2026-12-10T14:00:00+03:00");
+  const now = new Date();
+  const difference = eventDate - now;
+  const timer = document.getElementById("timer");
+
+  if (difference <= 0) {
+    timer.textContent = "أهلًا بكم، بدأت فرحتنا! 🤍";
+    return;
+  }
+
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor((difference / 3600000) % 24);
+  const minutes = Math.floor((difference / 60000) % 60);
+  const seconds = Math.floor((difference / 1000) % 60);
+
+  timer.textContent =
+    days + " يوم · " +
+    hours + " ساعة · " +
+    minutes + " دقيقة · " +
+    seconds + " ثانية";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
