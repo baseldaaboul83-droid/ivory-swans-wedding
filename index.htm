@@ -100,11 +100,16 @@ body {
 }
 
 @keyframes sceneFade {
-  0%, 75% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
+  0%, 75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-/* اللمسات الذهبية */
+/* اللمعات الذهبية */
 .gold-sparkles {
   position: fixed;
   inset: 0;
@@ -175,7 +180,9 @@ body {
     transform: translateY(-20px) rotate(0deg);
     opacity: 0;
   }
-  15% { opacity: .8; }
+  15% {
+    opacity: .8;
+  }
   100% {
     transform: translateY(110vh) rotate(360deg);
     opacity: 0;
@@ -212,6 +219,7 @@ body {
   color: #76664e;
 }
 
+/* العد التنازلي */
 .countdown-box {
   padding: 24px 15px;
   margin: 20px auto;
@@ -305,6 +313,7 @@ body {
 
 <main class="container">
 
+  <!-- صورة الدعوة الجديدة -->
   <img
     class="poster"
     src="https://baseldaaboul83-droid.github.io/ivory-swans-wedding/0BE13247-96C3-4BD3-8025-56FE000D0E79.png"
@@ -327,6 +336,7 @@ body {
     وجمع بينهما في خير
   </div>
 
+  <!-- العد التنازلي -->
   <section class="countdown-box">
     <h2>باقي على فرحتنا</h2>
 
@@ -353,12 +363,14 @@ body {
     </div>
   </section>
 
+  <!-- الموعد الجديد -->
   <div class="details">
-    الخميس 10 ديسمبر 2026<br>
+    الأربعاء 9 ديسمبر 2026<br>
     الساعة الثانية ظهرًا<br>
     اللاذقية – منتجع النبع السياحي
   </div>
 
+  <!-- الموسيقى -->
   <button class="music-button" id="musicButton">
     ▶ تشغيل موسيقى الدعوة
   </button>
@@ -376,8 +388,8 @@ body {
 </main>
 
 <script>
-/* العد التنازلي */
-const eventDate = new Date("2026-12-10T14:00:00+03:00").getTime();
+/* العد التنازلي لموعد 9 ديسمبر 2026 */
+const eventDate = new Date("2026-12-09T14:00:00+03:00").getTime();
 
 function updateCountdown() {
   const now = Date.now();
@@ -405,7 +417,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-/* الموسيقى */
+/* تشغيل الموسيقى */
 const music = document.getElementById("weddingMusic");
 const musicButton = document.getElementById("musicButton");
 
@@ -418,10 +430,12 @@ async function startMusic() {
   }
 }
 
+/* محاولة التشغيل التلقائي */
 music.play().then(() => {
   musicButton.textContent = "❚❚ إيقاف الموسيقى";
 }).catch(() => {});
 
+/* بدء الموسيقى عند أول لمسة إذا منعها سفاري */
 function firstTouch() {
   startMusic();
   document.removeEventListener("touchstart", firstTouch);
@@ -431,6 +445,7 @@ function firstTouch() {
 document.addEventListener("touchstart", firstTouch);
 document.addEventListener("click", firstTouch);
 
+/* زر التشغيل والإيقاف */
 musicButton.addEventListener("click", async function() {
   if (music.paused) {
     await startMusic();
