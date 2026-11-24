@@ -2,399 +2,409 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f8f3e9">
-  <title>خطوبة باسل ولين</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f3e9">
+<title>خطوبة باسل ولين</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Tahoma", sans-serif;
-      color: #65543c;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, #fffdf7, #eee5d5 75%);
-      overflow-x: hidden;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+  color: #766344;
+  background: linear-gradient(145deg,#fffdf8,#eee5d5,#faf6ed);
+  overflow-x: hidden;
+}
 
-    .page {
-      width: min(94%, 650px);
-      margin: 25px auto;
-      padding: 25px 18px 35px;
-      border: 2px solid #c6a45c;
-      outline: 1px solid #e4d3a9;
-      outline-offset: 5px;
-      border-radius: 18px;
-      background: rgba(255, 253, 247, 0.94);
-      box-shadow: 0 12px 40px #78643b25;
-      animation: appear 1.5s ease both;
-      position: relative;
-    }
+.page {
+  width: min(94%,650px);
+  margin: 28px auto;
+  padding: 28px 18px 35px;
+  border: 2px solid #c6a45c;
+  outline: 1px solid #e3d2a7;
+  outline-offset: 5px;
+  border-radius: 18px;
+  background: rgba(255,253,247,.96);
+  box-shadow: 0 12px 40px #78643b25;
+  position: relative;
+  animation: pageReveal 2s ease both;
+}
 
-    h1 {
-      color: #b18b43;
-      font-size: clamp(27px, 6vw, 38px);
-      margin: 12px 0 20px;
-      font-weight: normal;
-    }
+@keyframes pageReveal {
+  from { opacity:0; transform:translateY(25px) scale(.98); }
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
 
-    .subtitle {
-      font-size: 19px;
-      line-height: 2;
-      color: #88734f;
-    }
+h1 {
+  color: #b18b43;
+  font-size: clamp(28px,6vw,39px);
+  font-weight: normal;
+  margin: 14px 0 22px;
+  animation: fadeIn 2s ease both;
+}
 
-    .names {
-      margin: 20px 0;
-      color: #a78340;
-      font-size: clamp(25px, 6vw, 35px);
-      line-height: 1.9;
-      font-weight: bold;
-    }
+.subtitle {
+  font-size: 18px;
+  line-height: 2;
+  color: #88734f;
+}
 
-    .ampersand {
-      color: #8ba7b2;
-      font-size: 25px;
-    }
+.names {
+  margin: 20px 0;
+  color: #a78340;
+  font-size: clamp(25px,6vw,35px);
+  line-height: 1.9;
+  font-weight: bold;
+  animation: fadeIn 3s ease both;
+}
 
-    .divider {
-      width: 65%;
-      height: 1px;
-      margin: 22px auto;
-      background: linear-gradient(to right, transparent, #c6a45c, transparent);
-    }
+.ampersand {
+  color: #8ba7b2;
+  font-size: 24px;
+}
 
-    .invitation-image {
-      display: block;
-      width: 100%;
-      max-width: 520px;
-      height: auto;
-      margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 7px 22px #8b744333;
-      border: 1px solid #d8c28e;
-    }
+.divider {
+  width: 70%;
+  height: 1px;
+  margin: 23px auto;
+  background: linear-gradient(to right,transparent,#c6a45c,transparent);
+}
 
-    .date {
-      font-size: 23px;
-      color: #a78340;
-      line-height: 1.9;
-      font-weight: bold;
-    }
+.invitation-image {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  border: 1px solid #d8c28e;
+  box-shadow: 0 7px 22px #8b744333;
+  animation: fadeIn 3s ease both;
+}
 
-    .details {
-      font-size: 18px;
-      line-height: 2.2;
-      color: #75664d;
-    }
+.date {
+  font-size: 23px;
+  color: #a78340;
+  line-height: 1.9;
+  font-weight: bold;
+}
 
-    .blessing {
-      font-size: 19px;
-      line-height: 2;
-      color: #8a744e;
-      margin-top: 25px;
-    }
+.details {
+  font-size: 18px;
+  line-height: 2.2;
+  color: #75664d;
+}
 
-    .countdown-title {
-      color: #a78340;
-      font-size: 20px;
-      margin-top: 28px;
-    }
+.blessing {
+  font-size: 19px;
+  line-height: 2;
+  color: #8a744e;
+  margin-top: 25px;
+}
 
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin: 18px auto;
-      direction: rtl;
-    }
+.countdown-title {
+  color: #a78340;
+  font-size: 20px;
+  margin-top: 28px;
+}
 
-    .time-box {
-      background: #f1eadb;
-      border: 1px solid #d4bd86;
-      border-radius: 10px;
-      padding: 12px 8px;
-      min-width: 70px;
-      color: #8b7040;
-    }
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: 18px auto;
+  direction: rtl;
+}
 
-    .time-box strong {
-      display: block;
-      font-size: 25px;
-    }
+.time-box {
+  background: #f1eadb;
+  border: 1px solid #d4bd86;
+  border-radius: 10px;
+  padding: 12px 8px;
+  min-width: 70px;
+  color: #8b7040;
+}
 
-    .time-box span {
-      font-size: 12px;
-    }
+.time-box strong {
+  display: block;
+  font-size: 25px;
+}
 
-    .music-button {
-      background: linear-gradient(135deg, #c6a45c, #9c7939);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 13px 27px;
-      font-size: 16px;
-      margin-top: 15px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px #9c793944;
-    }
+.time-box span {
+  font-size: 12px;
+}
 
-    .music-button:active {
-      transform: scale(.97);
-    }
+.music-button {
+  background: linear-gradient(135deg,#c6a45c,#9c7939);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 27px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #9c793944;
+}
 
-    .footer {
-      color: #9c8b6c;
-      font-size: 13px;
-      margin-top: 28px;
-    }
+.notice {
+  margin: 22px auto 10px;
+  padding: 16px 12px;
+  max-width: 480px;
+  border-top: 1px solid #d7c18e;
+  border-bottom: 1px solid #d7c18e;
+  color: #89734e;
+  font-size: 15px;
+  line-height: 2.2;
+  background: #faf6ed;
+  border-radius: 10px;
+}
 
-    .bird {
-      position: fixed;
-      z-index: 5;
-      top: 15%;
-      right: -60px;
-      font-size: 28px;
-      pointer-events: none;
-      animation: fly 12s linear infinite;
-      opacity: 0;
-    }
+.notice-title {
+  color: #a78340;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
 
-    .bird.two {
-      top: 32%;
-      animation-delay: 4s;
-      font-size: 22px;
-    }
+.footer {
+  color: #9c8b6c;
+  font-size: 13px;
+  margin-top: 28px;
+}
 
-    .bird.three {
-      top: 48%;
-      animation-delay: 8s;
-      font-size: 25px;
-    }
+/* لمعات ذهبية ناعمة */
+.sparkle {
+  position: fixed;
+  z-index: 3;
+  color: #c6a45c;
+  pointer-events: none;
+  opacity: 0;
+  animation: goldenGlow 4s ease-in-out infinite;
+}
 
-    .sparkle {
-      position: fixed;
-      color: #c6a45c;
-      pointer-events: none;
-      animation: sparkle 3s ease-in-out infinite;
-    }
+.sparkle.one {
+  top: 15%;
+  left: 9%;
+  font-size: 20px;
+}
 
-    .sparkle.one {
-      top: 18%;
-      left: 8%;
-    }
+.sparkle.two {
+  top: 45%;
+  right: 7%;
+  font-size: 15px;
+  animation-delay: 1s;
+}
 
-    .sparkle.two {
-      top: 65%;
-      right: 7%;
-      animation-delay: 1s;
-    }
+.sparkle.three {
+  top: 75%;
+  left: 12%;
+  font-size: 17px;
+  animation-delay: 2s;
+}
 
-    @keyframes fly {
-      0% {
-        transform: translateX(0) translateY(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: .8;
-      }
-      90% {
-        opacity: .8;
-      }
-      100% {
-        transform: translateX(-120vw) translateY(-45px);
-        opacity: 0;
-      }
-    }
+.sparkle.four {
+  top: 25%;
+  right: 12%;
+  font-size: 19px;
+  animation-delay: 3s;
+}
 
-    @keyframes sparkle {
-      0%, 100% {
-        opacity: .2;
-        transform: scale(.7);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.3);
-      }
-    }
+@keyframes goldenGlow {
+  0%,100% { opacity:.12; transform:scale(.7) rotate(0deg); }
+  50% { opacity:.9; transform:scale(1.25) rotate(35deg); }
+}
 
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+/* زهور ناعمة */
+.flower {
+  position: absolute;
+  color: #c7b38a;
+  font-size: 28px;
+  opacity: .55;
+  animation: flowerAppear 4s ease-in-out infinite alternate;
+}
 
-    @media (max-width: 400px) {
-      .page {
-        padding: 20px 12px;
-      }
+.flower.left {
+  top: 12px;
+  left: 12px;
+}
 
-      .time-box {
-        min-width: 62px;
-      }
-    }
-  </style>
+.flower.right {
+  top: 12px;
+  right: 12px;
+  animation-delay: 2s;
+}
+
+@keyframes flowerAppear {
+  from { opacity:.25; transform:scale(.85) rotate(-8deg); }
+  to { opacity:.8; transform:scale(1.08) rotate(8deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@media(max-width:400px) {
+  .page { padding:22px 12px; }
+  .time-box { min-width:62px; }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="bird">🕊️</div>
-  <div class="bird two">🕊️</div>
-  <div class="bird three">🕊️</div>
-  <div class="sparkle one">✦</div>
-  <div class="sparkle two">✧</div>
+<div class="sparkle one">✦</div>
+<div class="sparkle two">✧</div>
+<div class="sparkle three">✦</div>
+<div class="sparkle four">✧</div>
 
-  <main class="page">
+<main class="page">
 
-    <h1>على أجنحة الفرح</h1>
+  <div class="flower left">❀</div>
+  <div class="flower right">❀</div>
 
-    <div class="subtitle">
-      ندعوكم لمشاركتنا بداية حكاية كل من
+  <h1>على أجنحة الفرح</h1>
+
+  <div class="subtitle">
+    ندعوكم لمشاركتنا بداية حكاية كل من
+  </div>
+
+  <div class="names">
+    باسل جابر دعبول
+    <div class="ampersand">و</div>
+    لين محمد عثمان
+  </div>
+
+  <div class="divider"></div>
+
+  <img
+    class="invitation-image"
+    src="0BE13247-96C3-4BD3-8025-56FE000D0E79.png"
+    alt="دعوة خطوبة باسل ولين"
+  >
+
+  <div class="divider"></div>
+
+  <div class="date">
+    الأربعاء 9 ديسمبر 2026
+  </div>
+
+  <div class="details">
+    الساعة الثانية ظهرًا<br>
+    اللاذقية – منتجع النبع السياحي
+  </div>
+
+  <div class="blessing">
+    بارك الله لهما وبارك عليهما<br>
+    وجمع بينهما في خير
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="countdown-title">
+    بقي على فرحتنا
+  </div>
+
+  <div class="countdown">
+    <div class="time-box">
+      <strong id="days">--</strong>
+      <span>يوم</span>
     </div>
 
-    <div class="names">
-      باسل جابر دعبول
-      <div class="ampersand">و</div>
-      لين محمد عثمان
+    <div class="time-box">
+      <strong id="hours">--</strong>
+      <span>ساعة</span>
     </div>
 
+    <div class="time-box">
+      <strong id="minutes">--</strong>
+      <span>دقيقة</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="seconds">--</strong>
+      <span>ثانية</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <div class="notice-title">تنويه بكل محبة 🤍</div>
+    نعتذر منكم، ونرجو أن تكون فرحتنا هذه للكبار فقط،
+    شاكرين محبتكم وتفهّمكم.
     <div class="divider"></div>
+    هذه الدعوة شخصية ومخصصة لشخص واحد فقط،
+    ونرجو التكرم بالحضور دون مرافق.
+    شكرًا لتفهّمكم وتقديركم.
+  </div>
 
-    <img
-      class="invitation-image"
-      src="0BE13247-96C3-4BD3-8025-56FE000D0E79.png"
-      alt="دعوة خطوبة باسل ولين"
-    >
+  <button class="music-button" id="musicButton">
+    ♫ تشغيل الموسيقى
+  </button>
 
-    <div class="divider"></div>
+  <div class="footer">
+    بكل الحب ننتظر مشاركتكم فرحتنا
+  </div>
 
-    <div class="date">
-      الأربعاء 9 ديسمبر 2026
-    </div>
+</main>
 
-    <div class="details">
-      الساعة الثانية ظهرًا<br>
-      اللاذقية – منتجع النبع السياحي
-    </div>
+<audio id="music" loop preload="none">
+  <source src="Wedding%20day.%20Ave%20Maria%20and%20Azan.m4a" type="audio/mp4">
+</audio>
 
-    <div class="blessing">
-      بارك الله لهما وبارك عليهما<br>
-      وجمع بينهما في خير
-    </div>
+<script>
+  // موعد الخطوبة: الأربعاء 9 ديسمبر 2026 الساعة 2 ظهرًا
+  const eventDate =
+    new Date("2026-12-09T14:00:00+03:00").getTime();
 
-    <div class="divider"></div>
+  function updateCountdown() {
+    const difference = eventDate - Date.now();
 
-    <div class="countdown-title">
-      بقي على فرحتنا
-    </div>
-
-    <div class="countdown">
-      <div class="time-box">
-        <strong id="days">--</strong>
-        <span>يوم</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="hours">--</strong>
-        <span>ساعة</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="minutes">--</strong>
-        <span>دقيقة</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="seconds">--</strong>
-        <span>ثانية</span>
-      </div>
-    </div>
-
-    <button class="music-button" id="musicButton">
-      ♫ تشغيل الموسيقى
-    </button>
-
-    <div class="footer">
-      بكل الحب ننتظر مشاركتكم فرحتنا
-    </div>
-
-  </main>
-
-  <audio id="music" loop preload="none">
-    <source src="Wedding%20day.%20Ave%20Maria%20and%20Azan.m4a" type="audio/mp4">
-  </audio>
-
-  <script>
-    // موعد الخطوبة: الأربعاء 9 ديسمبر 2026 الساعة 2 ظهرًا
-    const eventDate =
-      new Date("2026-12-09T14:00:00+03:00").getTime();
-
-    function updateCountdown() {
-      const now = Date.now();
-      const difference = eventDate - now;
-
-      if (difference <= 0) {
-        document.getElementById("days").textContent = "0";
-        document.getElementById("hours").textContent = "0";
-        document.getElementById("minutes").textContent = "0";
-        document.getElementById("seconds").textContent = "0";
-        return;
-      }
-
-      const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-      );
-
-      const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-      );
-
-      const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-      );
-
-      const seconds = Math.floor(
-        (difference / 1000) % 60
-      );
-
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = seconds;
+    if (difference <= 0) {
+      document.getElementById("days").textContent = "0";
+      document.getElementById("hours").textContent = "0";
+      document.getElementById("minutes").textContent = "0";
+      document.getElementById("seconds").textContent = "0";
+      return;
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    const days = Math.floor(difference / 86400000);
+    const hours = Math.floor((difference / 3600000) % 24);
+    const minutes = Math.floor((difference / 60000) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
 
-    const music = document.getElementById("music");
-    const musicButton = document.getElementById("musicButton");
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
 
-    musicButton.addEventListener("click", async function () {
-      if (music.paused) {
-        try {
-          await music.play();
-          musicButton.textContent = "♫ إيقاف الموسيقى";
-        } catch (error) {
-          musicButton.textContent = "تعذّر تشغيل الموسيقى";
-        }
-      } else {
-        music.pause();
-        musicButton.textContent = "♫ تشغيل الموسيقى";
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  const music = document.getElementById("music");
+  const musicButton = document.getElementById("musicButton");
+
+  musicButton.addEventListener("click", async function() {
+    if (music.paused) {
+      try {
+        await music.play();
+        musicButton.textContent = "♫ إيقاف الموسيقى";
+      } catch (error) {
+        musicButton.textContent = "تعذّر تشغيل الموسيقى";
       }
-    });
-  </script>
+    } else {
+      music.pause();
+      musicButton.textContent = "♫ تشغيل الموسيقى";
+    }
+  });
+</script>
 
 </body>
 </html>
